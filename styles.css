@@ -23,14 +23,39 @@ a {
     font-size: 25px;
     margin: 10px;
     color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #538c92;
 }
 
 header {
-  padding: 50px;
+  padding: 1px;
 }
 
 h1 {
     text-align: center;
     font-size: 118px;
     color: white;
+}
+
+h3 {
+    font-size: 40px;
+    color: #0C1446;
+}
+
+.about {
+    max-width: 80em;
+    padding-bottom: 250px;
+}
+
+img {
+    width: 290px;
+    height: 325px;
+    float: left;
+    margin-left: 180px;
+    margin-right: 90px;
+    border: 9px solid #538c92;
+    border-radius: 100px;
 }
