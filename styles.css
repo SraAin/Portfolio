@@ -89,3 +89,22 @@ footer {
     background-color: #0C1446;
     margin-top: -4px;
 }
+
+@media only screen and (max-width: 700px) {
+    body {
+      text-align: center;
+    }
+    .about{
+        margin: 0 10px 0 0;
+    }
+  }
+
+  @media only screen and (max-width: 555px) {
+      .nav-links {
+        margin-right: 0;
+      }
+      a {
+        font-size: 20px;
+        margin: 5px;
+      }
+  }
