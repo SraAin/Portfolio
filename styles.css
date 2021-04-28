@@ -40,14 +40,20 @@ h1 {
     color: white;
 }
 
+p {
+    margin-left: 10px;
+}
+
 h3 {
+    margin-left: 10px;
+    margin-top: -4px;
     font-size: 40px;
     color: #0C1446;
 }
 
 .about {
     max-width: 80em;
-    padding-bottom: 250px;
+    margin: 0% 15% 0% 20%;
 }
 
 img {
@@ -58,4 +64,28 @@ img {
     margin-right: 90px;
     border: 9px solid #538c92;
     border-radius: 100px;
+}
+
+.project {
+    padding-bottom: 50px;
+    background-color: #2B7C85;
+    color: white;
+}
+
+.project-content {
+    margin: 0 15% 0 20%;
+}
+
+.project h3 {
+    color: white;
+}
+
+.learn-content {
+    margin: 0 15% 0 20%; 
+}
+
+footer {
+    padding: 150px;
+    background-color: #0C1446;
+    margin-top: -4px;
 }
