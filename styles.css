@@ -40,10 +40,6 @@ h1 {
     color: white;
 }
 
-p {
-    margin-left: 10px;
-}
-
 h3 {
     margin-left: 10px;
     margin-top: -4px;
@@ -56,7 +52,7 @@ h3 {
     margin: 0% 15% 0% 20%;
 }
 
-img {
+/*img {
     width: 290px;
     height: 325px;
     float: left;
@@ -64,12 +60,20 @@ img {
     margin-right: 90px;
     border: 9px solid #538c92;
     border-radius: 100px;
+}*/
+
+#navigation-img {
+    width: 20%;
+    margin-right: 70px;
+    float: left;
 }
 
 .project {
-    padding-bottom: 50px;
     background-color: #2B7C85;
     color: white;
+    display: flex;
+    align-items: center;
+    margin-top: -4px;
 }
 
 .project-content {
@@ -90,12 +94,17 @@ footer {
     margin-top: -4px;
 }
 
+/* @media only */
+
 @media only screen and (max-width: 700px) {
     body {
       text-align: center;
     }
     .about{
         margin: 0 10px 0 0;
+    }
+    #navigation-img {
+        float: none;
     }
   }
 
