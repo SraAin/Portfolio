@@ -135,8 +135,38 @@ export class TorchService {
         <div class="proxy-server">
           <h5>Proxy Server</h5>
           <pre>
-            <code class="typescript">
+            <code class="language-javascript">
+const express = require('express');
+const morgan = require('morgan');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
+// Create Express Server
+const app = express();
+
+// Logging
+app.use(morgan('dev'));
+
+// Configuration
+const PORT = process.env.PORT;
+const HOST = "0.0.0.0";
+const API_SERVICE_URL = "https://www.foodie.fi";
+
+// Authorization
+app.use('', (req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    next();
+ });
+
+// Proxy endpoints
+app.use('/entry', createProxyMiddleware({
+    target: API_SERVICE_URL,
+    changeOrigin: true,
+}));
+
+// Start Proxy
+app.listen(PORT, HOST, () => {
+    console.log(`Starting Proxy at ${HOST}:${PORT}`);
+});
             </code>
           </pre>
         </div>
