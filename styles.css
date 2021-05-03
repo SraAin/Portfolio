@@ -7,10 +7,6 @@ pre {
     float: left;
 }
 
-.scanner-code {
-    padding-top: 24em;
-}
-
 /* Navigation */
 .header {
     background-color: #2B7C85;
@@ -62,7 +58,8 @@ h4{
 }
 
 h5 {
-    font-size: 20px;
+    font-size: 25px;
+    margin-top: 60px;
 }
 
 /* about section */
@@ -93,9 +90,10 @@ h5 {
 
 #navigation-img,
 #scanner-img {
-    width: 20%;
-    margin-right: 70px;
+    width: 30%;
+    margin-right: 75px;
     float: left;
+    margin-bottom: 3px;
 }
 
 .scanner-txt {
@@ -103,7 +101,12 @@ h5 {
 }
 
 .navigation {
-    padding-bottom: 59em;
+    padding-bottom: 50em;
+}
+
+#torch-info {
+    padding-left: 30em;
+    margin-top: -7em;
 }
 
 .proxy-server {
@@ -124,6 +127,10 @@ h5 {
 
 .learn-content {
     margin: 0 15% 0 20%; 
+}
+
+li {
+    line-height: 2;
 }
 
 /* Footer */

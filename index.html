@@ -36,14 +36,11 @@
           <img id="self-portrait" src="./img/omakuva.jpg" alt="self-portrait" />
           <div>
             <p>
-              Terve! Olen 24-vuotias opiskelija Jyväskylästä. Opiskelen tällä
+              Terve! Olen 23-vuotias opiskelija Jyväskylästä. Opiskelen tällä
               hetkellä toista vuotta tietojenkäsittelyä Jyväskylän
               ammattikorkeakoulussa.
             </p>
-            <p>
-              Allergiaskanneri projektissa toimin koodarina sekä
-              tuotteenomistajana.
-            </p>
+            <p>Vapaa-aika kuluu elokuvien katsomiseen ja pelaamiseen.</p>
           </div>
         </div>
       </div>
@@ -52,8 +49,18 @@
     <div class="project">
       <div class="project-content">
         <h3 id="pro">Projekti</h3>
-        <!--<h4>Allergiaskanneri</h4>-->
+        <h4>Allergiaskanneri</h4>
+        <p>
+          Allergiaskanneri on sovellus, joka helpottaa erityisruokavalioisen
+          kaupassakäyntiä. Sovelluksesta löytyy valmis lista ruoka-aineita ja
+          skanneri, jonka avulla luetaan tuotteen viivakoodi. Skannauksen
+          jälkeen sovellus ilmoittaa käyttäjälle sisältääkö skannattu tuote
+          mitään epäsopivia ruoka-aineita.
+        </p>
+        <p>Allergiaskanneri on PWA-sovellus, joka on rakennettu Angularissa.</p>
+        <p>Toimin projektissa koodarina sekä tuotteenomistajana.</p>
         <div class="navigation">
+          <h5 id="navigation-text">Sovelluksen Navigaatio</h5>
           <div class="navigation-img">
             <img
               id="navigation-img"
@@ -62,7 +69,14 @@
             />
           </div>
           <div class="nav-txt">
-            <h5 id="navigation-text">Sovelluksen navigaatio</h5>
+            <ul>
+              <li>
+                Ensimmäisenä lähdin kehittämään sovellukseen navigaatiota.
+              </li>
+              <li>Kehityksen apuna on käytetty Angular Material kirjastoa.</li>
+              <li>Data binding</li>
+              <li>Ohjelmointikielet: html ja css</li>
+            </ul>
             <pre>
               <code class="language-markup">
 &lt;header&gt;
@@ -93,13 +107,24 @@
           </div>
         </div>
         <div class="scanner">
+          <h5>Skannerin Ulkoasu ja Lamppu</h5>
+          <ul>
+            <li>Kameran asettaminen kokonäytölle</li>
+            <li>Mustat laatikot</li>
+            <li>Ohjelmointikielet: css ja html</li>
+          </ul>
+          <ul id="torch-info">
+            <li>
+              torch.service.ts -tiedosto
+            </li>
+            <li>MediaStreamTrack</li>
+            <li>Ohjelmointikieli: TypeScript</li>
+          </ul>
           <div class="scanner-img">
             <img id="scanner-img" src="./img/scanner.jpg" alt="scanner" />
           </div>
-          <div class="scanner-txt">
-            <h5>Skannerin ulkoasu ja lamppu</h5>
-            <div class="scanner-code">
-              <pre>
+          <div class="scanner-code">
+            <pre>
               <code class="language-typescript">
 export class TorchService {
   public isTorchOn: boolean = false;
@@ -129,11 +154,15 @@ export class TorchService {
 }
               </code>
             </pre>
-            </div>
           </div>
         </div>
         <div class="proxy-server">
           <h5>Proxy Server</h5>
+          <ul>
+            <li>Erillinen projekti</li>
+            <li>Hostataan Herokussa</li>
+            <li>Ohjelmointikieli: JavaScript</li>
+          </ul>
           <pre>
             <code class="language-javascript">
 const express = require('express');
@@ -176,6 +205,41 @@ app.listen(PORT, HOST, () => {
     <div class="learn">
       <div class="learn-content">
         <h3 id="lea">Osaaminen</h3>
+        <h5>Product Owner</h5>
+        <ul>
+          <li>Käyttäjäkertomukset</li>
+          <li>ZenHub</li>
+          <li>Julkaisusuunnitelma</li>
+        </ul>
+        <p>
+          Tuotteenomistajan roolissa suurin osa ajasta kului
+          käyttäjäkertomuksiin. Opintojakson alussa hankaluuksia oli
+          hyväksymiskriteerien kirjoittamisessa sekä käyttäjäkertomuksen
+          hajottamisessa sopivan kokoisiksi palasiksi. Toinen ongelma oli
+          ZenHubin pitäminen ajan tasalla. Tähän keksimme ratkaisun
+          ensimmäisessä retrospektiivissä. Loppua kohden ZenHubin päivittäminen
+          ja seuraaminen oli aktiivisempaa
+        </p>
+        <h5>Tekniikka</h5>
+        <ul>
+          <li>GitHub</li>
+          <li>Angular</li>
+          <li>Proxy Server</li>
+          <li>Testaus puhelimella</li>
+        </ul>
+        <h5>Työskentely</h5>
+        <ul>
+          <li>Etätyöskentely</li>
+          <li>Tiimityöskentely</li>
+          <li>Esiintyminen</li>
+        </ul>
+        <h5>Reflektio</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus nesciunt nobis perferendis laudantium quasi dolore,
+          doloribus repudiandae dicta sapiente quae itaque. Exercitationem
+          autem, aut soluta expedita placeat debitis minus cum.
+        </p>
       </div>
     </div>
 

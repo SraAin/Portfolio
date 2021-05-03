@@ -18,6 +18,8 @@ pre[class*="language-"] {
 	word-break: normal;
 	word-wrap: normal;
 	line-height: 1.5;
+	margin: 0;
+	margin-bottom: 2em;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
