@@ -59,7 +59,7 @@ h4{
 
 h5 {
     font-size: 25px;
-    margin-top: 60px;
+    margin-top: 65px;
 }
 
 /* about section */
@@ -111,6 +111,10 @@ h5 {
 
 .proxy-server {
     padding-top: 40em;
+}
+
+.other-contribution {
+    padding-top: 41em;
 }
 
 .project {
