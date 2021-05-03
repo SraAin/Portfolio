@@ -90,7 +90,7 @@ h5 {
 
 #navigation-img,
 #scanner-img {
-    width: 30%;
+    width: 25%;
     margin-right: 75px;
     float: left;
     margin-bottom: 3px;
@@ -102,6 +102,10 @@ h5 {
 
 .navigation {
     padding-bottom: 50em;
+}
+
+.nav-code {
+    width: -webkit-fill-available;
 }
 
 #torch-info {
