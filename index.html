@@ -34,11 +34,17 @@
         <h3 id="ab">About</h3>
         <div class="about-content">
           <img id="self-portrait" src="/img/omakuva.jpg" alt="self-portrait" />
-          <p>
-            Terve! Olen 23-vuotias opiskelija Jyväskylästä. Opiskelen tällä
-            hetkellä toista vuotta tietojenkäsittelyä Jyväskylän
-            ammattikorkeakoulussa.
-          </p>
+          <div>
+            <p>
+              Terve! Olen 23-vuotias opiskelija Jyväskylästä. Opiskelen tällä
+              hetkellä toista vuotta tietojenkäsittelyä Jyväskylän
+              ammattikorkeakoulussa.
+            </p>
+            <p>
+              Allergiaskanneri projektissa toimin koodarina sekä
+              tuotteenomistajana.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -59,6 +65,17 @@
             <p id="navigation-text">Sovelluksen navigaatio</p>
             <pre>
               <code class="language-markup">
+&lt;header&gt;
+  &lt;div mat-button class="menu-button" (click)="isMenuOpen=!isMenuOpen"&gt;
+    &lt;div class="icon"&gt;
+    &lt;mat-icon&gt;
+        {{ isMenuOpen ? "close" : "menu" }}
+    &lt;/mat-icon&gt;
+    &lt;/div&gt;
+    &lt;div class="app-title">&lt;span>{{myHeader}}&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
 &lt;mat-sidenav-container class="sidenav-container"&gt;
   &lt;mat-sidenav #sidenav autoFocus="false" mode="over" [(opened)]="isMenuOpen" class="sidenav"&gt;
     &lt;a mat-button routerLink="/frontpage" (click)="sidenav.close()"&gt;&lt;span class="material-icons"&gt;home&lt;/span&gt;Etusivu&lt;/a&gt;
@@ -74,6 +91,53 @@
               </code>
             </pre>
           </div>
+        </div>
+        <div class="scanner">
+          <div class="scanner-img">
+            <img id="scanner-img" src="/img/scanner.jpg" alt="scanner" />
+          </div>
+          <div class="scanner-txt">
+            <p>Skannerin ulkoasu ja lamppu</p>
+            <div class="scanner-code">
+              <pre>
+              <code class="language-typescript">
+export class TorchService {
+  public isTorchOn: boolean = false;
+                
+  constructor() {}
+                
+  toggleTorch(): void {
+    let track = Quagga.CameraAccess.getActiveTrack();
+    let capabilities = track.getCapabilities();
+    // let constraints = track.getConstraints();
+    this.isTorchOn = !this.isTorchOn;
+    if (capabilities) {
+      //this.mode = true;
+      track.applyConstraints({
+        // @ts-ignore
+        advanced: [{ torch: this.isTorchOn }],
+      })
+      .then((result) => {
+        console.log(`camera is on, value of bool is ${this.isTorchOn}`);
+        console.log(result);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+    }
+  }
+}
+              </code>
+            </pre>
+            </div>
+          </div>
+        </div>
+        <div class="proxy-server">
+          <pre>
+            <code class="typescript">
+
+            </code>
+          </pre>
         </div>
       </div>
     </div>

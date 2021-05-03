@@ -7,11 +7,10 @@ https://prismjs.com/download.html#themes=prism-twilight&languages=markup+css+cli
  */
 code[class*="language-"],
 pre[class*="language-"] {
-	margin-left: 150px;
 	color: white;
 	background: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
+	font-size: 13px;
 	text-align: left;
 	text-shadow: 0 -.1em .2em black;
 	white-space: pre;
